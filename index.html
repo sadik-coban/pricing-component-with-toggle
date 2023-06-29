@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | [Challenge Name Here]</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="head">
+      <h2 class="header-pricing">Our Pricing</h2>
+      <div class="annual-montly-selector">
+        <h3>Annually</h3>
+        <label class="switch">
+          <input
+            id="price-checkbox"
+            type="checkbox"
+            onclick="getValue()"
+            checked
+          />
+          <span class="slider round"></span>
+        </label>
+        <h3>Monthly</h3>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="area">
+        <div class="basic-master basic card">
+          <h4>Basic</h4>
+
+          <h1 class="properties price" id="basic-price">&dollar;19.99</h1>
+          <!-- &dollar;199.99 -->
+          <h4 class="properties">500 GB Storage</h4>
+          <h4 class="properties allowed">2 Users Allowed</h4>
+          <h4 class="properties">Send up to 3 GB</h4>
+          <button>Learn More</button>
+        </div>
+      </div>
+      <div class="professional card">
+        <h4>Professional</h4>
+
+        <h1 class="properties price" id="pro-price">&dollar;24.99</h1>
+        <!-- &dollar;199.99 -->
+        <h4 class="properties storage">1 GB Storage</h4>
+        <h4 class="properties">5 Users Allowed</h4>
+        <h4 class="properties">Send up to 10 GB</h4>
+        <button>Learn More</button>
+      </div>
+      <div class="area">
+        <div class="basic-master master card">
+          <h4>Master</h4>
+
+          <h1 class="properties price" id="master-price">&dollar;39.99</h1>
+          <!-- &dollar;199.99 -->
+          <h4 class="properties">2 TB Storage</h4>
+          <h4 class="properties allowed">10 Users Allowed</h4>
+          <h4 class="properties">Send up to 20 GB</h4>
+          <button>Learn More</button>
+        </div>
+      </div>
+    </div>
+    <!-- 
+
+
+
+
+  Professional
+  &dollar;24.99
+  &dollar;249.99
+  1 TB Storage
+  5 Users Allowed
+  Send up to 10 GB
+  Learn More
+
+  Master
+  &dollar;39.99
+  &dollar;399.99
+  2 TB Storage
+  10 Users Allowed
+  Send up to 20 GB
+  Learn More -->
+    <script src="pricing.js"></script>
+  </body>
+</html>

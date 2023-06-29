@@ -1,0 +1,221 @@
+* {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+  }
+  body {
+    background: url("images/bg-top.svg") no-repeat 280% top fixed;
+    background-color: hsl(240, 78%, 98%);
+
+    overflow-x: hidden;
+  }
+  .switch {
+    margin: 0 24px;
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      to right,
+      hsl(236, 72%, 79%),
+      hsl(237, 63%, 64%)
+    );
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  /*
+input:checked + .slider {
+background-color: #2196F3;
+}
+
+input:focus + .slider {
+box-shadow: 0 0 1px #2196F3;
+}
+*/
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  .slider:hover {
+    background: linear-gradient(
+      to right,
+      hsl(235, 63%, 85%),
+      hsl(237, 50%, 76%)
+    );
+  }
+
+  .annual-montly-selector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 60px;
+    color: hsl(232, 13%, 33%);
+  }
+  .header-pricing {
+    
+    margin-top: 120px;
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 32px;
+    color: hsl(232, 13%, 33%);
+  }
+  .basic-master {
+    background: white;
+    color: hsl(232, 13%, 33%);
+  }
+  .card {
+    margin-bottom: 20px;
+    border-radius: 12px;
+    padding: 50px 32px 30px 32px;
+    text-align: center;
+    /*min-width: 500px;*/
+  }
+  .properties {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .basic-master .properties {
+    border-bottom: hsl(240, 78%, 98%) 1px solid;
+  }
+  .container {
+    margin: 12px auto;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+  }
+  .price {
+    font-size: 55px;
+  }
+  button {
+    /* Green */
+    border: none;
+
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+    box-sizing: border-box;
+  }
+  .basic-master button {
+    background: linear-gradient(
+      to right,
+      hsl(236, 72%, 79%),
+      hsl(237, 63%, 64%)
+    );
+    color: white;
+  }
+  .basic-master button:hover {
+    box-shadow: 0px 0px 0px 1px hsl(237, 63%, 64%);
+    color: hsl(237, 63%, 64%);
+    background: white;
+  }
+  .professional button {
+    background: white;
+    color: hsl(237, 63%, 64%);
+  }
+  .professional button:hover {
+    box-shadow: 0px 0px 0px 1px white;
+    background: linear-gradient(
+      to right,
+      hsl(236, 72%, 79%),
+      hsl(237, 63%, 64%)
+    );
+    color: white;
+  }
+  /*
+  .basic-master .allowed {
+    border-bottom: hsl(234, 14%, 74%) 1px solid;
+  }
+  */
+  .professional {
+    padding:70px 32px 30px 32px;
+    background : linear-gradient(
+      to right,
+      hsl(236, 72%, 79%),
+      hsl(237, 63%, 64%)
+    );
+    color: white;
+  }
+
+  .professional .properties {
+    border-bottom: hsl(234, 14%, 74%) 1px solid;
+  }
+  /*
+  .professional .storage {
+    border-bottom: hsl(233, 13%, 49%) 1px solid;
+  }
+  */
+  .area {
+    margin: 25px 0;
+  }
+
+  @media only screen and (min-width: 768px) {
+    body {
+      background: url("images/bg-top.svg") no-repeat right top fixed,
+        url("images/bg-bottom.svg") no-repeat left bottom fixed;
+      background-color: hsl(240, 78%, 98%);
+      overflow-x: auto;
+    }
+    .container {
+      flex-direction: row;
+      max-width: 1090px;
+    }
+    .card {
+      min-width: 300px;
+    }
+    .basic {
+      border-radius: 0;
+      border-bottom-left-radius: 12px;
+      border-top-left-radius: 12px;
+    }
+    .master {
+      border-radius: 0;
+      border-bottom-right-radius: 12px;
+      border-top-right-radius: 12px;
+    }
+  }
